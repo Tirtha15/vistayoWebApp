@@ -9,7 +9,8 @@
  */
 angular.module('vistayoApp')
   .controller('AboutCtrl', function () {
-    this.awesomeThings = [
+  	var vm = this;
+    vm.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
