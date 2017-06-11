@@ -7,7 +7,7 @@ angular.module('searchService', [])
 		$http({
 			url:'api/v2/holidays/suggest',
 			method:'GET',
-			headers:{'x-access-token': token},
+			headers:{'a-access-token': token},
 			params: {
 			term: term
 			}
@@ -18,9 +18,9 @@ angular.module('searchService', [])
 	};
 	searchFactory.ThemeSearch = function(keyword, params, callback) {
 		$http({
-			url:'api/v2//holidays/theme/'+'keyword',
+			url:'api/v2/holidays/theme/'+'keyword',
 			method:'GET',
-			headers:{'x-access-token': token},
+			headers:{'a-access-token': token},
 			params: {
 				from: params.from || 0,
 				limit: params.limit || 20,
@@ -39,7 +39,7 @@ angular.module('searchService', [])
 		$http({
 			url:'api/v2/holidays/destination/'+'keyword',
 			method:'GET',
-			headers:{'x-access-token': token},
+			headers:{'a-access-token': token},
 			params: {
 				from: params.from || 0,
 				limit: params.limit || 20,

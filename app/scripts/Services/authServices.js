@@ -10,10 +10,29 @@ angular.module('authService', [])
 			password: password
 		})
 		.success(function(data) {
-			AuthToken.setToken(data.token);
+			AuthToken.setToken(data.aToken);
 			return data;
 		})
 	}
+
+	authFactory.signup = function(data) {
+
+		return $http.post('/api/v2/user/signup', data)
+		.success(function(data) {
+			AuthToken.setToken(data.aToken);
+			return data;
+		})
+	}
+
+	authFactory.adminSignup = function(data) {
+
+		return $http.post('/api/v2/user/login', data)
+		.success(function(data) {
+			AuthToken.setToken(data.aToken);
+			return data;
+		})
+	}
+
 	authFactory.logout = function() {
 		return $http.post('/api/v2/user/logout', {
 			mobile: mobile,
@@ -24,6 +43,7 @@ angular.module('authService', [])
 			return data;
 		})
 	}
+
 	authFactory.isLoggedIn = function() {
 		if(AuthToken.getToken())
 			return true;
@@ -34,9 +54,11 @@ angular.module('authService', [])
 })
 .factory('AuthToken', function($window) {
 	var authTokenFactory = {};
+
 	authTokenFactory.getToken = function() {
 		return $window.localStorage.getItem('token');
 	}
+
 	authTokenFactory.setToken = function(token) {
 		if(token)
 			$window.localStorage.setItem('token', token);
@@ -47,10 +69,11 @@ angular.module('authService', [])
 })
 .factory('AuthInterceptor', function($q, $location, AuthToken) {
 	var interceptorFactory = {};
+
 	interceptorFactory.request = function(config) {
 		var token = AuthToken.getToken();
 		if(token) {
-			config.headers['x-access-token'] = token;
+			config.headers['a-access-token'] = token;
 		}
 		return config;
 	};
