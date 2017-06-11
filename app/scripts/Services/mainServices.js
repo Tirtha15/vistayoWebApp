@@ -3,14 +3,14 @@ angular.module('mainService', [])
 	var baseUrl = 'http://localhost:80'
 	var mainFactory = {};
 	var token = AuthToken.getToken();
-	mainFactory.authSendInvitation = function(term, callback) {
+	mainFactory.sendInvitation = function(term, callback) {
 		return $http.post('/api/v2/invite/request', {
-			emailId: emailId:,
+			emailId: emailId,
 			mobile: mobile
 		})
 		.success(function(data) {
 			return data;
 		})
 	};
-	
+	return mainFactory;
 })

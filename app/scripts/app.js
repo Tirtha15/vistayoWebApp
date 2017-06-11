@@ -17,7 +17,10 @@ angular
     'ngTouch',
     'appRoute',
     'authService',
-    'searchService'
+    'searchService',
+    'adminService',
+    'mainService',
+    'mainController'
   ])
   .config(function($httpProvider) {
     $httpProvider.interceptors.push('AuthInterceptor');

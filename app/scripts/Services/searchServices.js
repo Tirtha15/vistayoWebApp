@@ -29,7 +29,7 @@ angular.module('searchService', [])
 				monthOfTravel: params.monthOfTravel,
 				idealFor: params.idealFor,
 				attractions: params.attractions
-			};
+			}
 		})
 		.success(function(response){
 			callback(response);
