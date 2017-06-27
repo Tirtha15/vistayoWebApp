@@ -1,0 +1,169 @@
+<!--
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+
+<div class="">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="images/profile.png" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						James
+					</div>
+					
+				</div>
+				
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							Account Settings </a>
+						</li>
+						<hr />
+						<li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-ok"></i>
+							Tasks </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+            <div class="col-md-12 card" style="padding-bottom:10px; padding-top:0px; margin-bottom: 20px; background-color: #e1eef4; border-radius: 0px; margin-top: 10px">
+                <div class="">
+                    <div class="col-md-6 logofooter" style="margin-top: 10px; text-align: left">
+                      Planning for a dream holiday? Get a 100% customised package exactly as per your specications
+                    </div>
+                    <!-- <div class="col-md-6" style="margin: 10px; text-align: left">
+                        <button type="button" class="btn-lg border-btn">Close</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row border-1px" ng-init="filters=false">
+                    <div class="col-md-12 card" style=" background-color: #efefef; border-radius: 0px">
+              			<div class="" style="padding-bottom:20px; padding-top: 10px">
+                			<div class="col-md-6" style="text-align: left">
+    			              Destination sugested for travel theme : Honymoon{{filters}}
+                			</div>
+                			<div class="col-md-6" ng-click="filters = !filters" style="text-align: left">
+                                <div class="col-md-6 light-text wordwrap" style="text-align: right;">Too many results. Use filters to narrow down your search</div>
+                                <div class="filter col-md-2">
+                                    <div class="div-1 center"></div>
+                                    <div class="div-2 center"></div>
+                                    <div class="div-3 center"></div> 
+                                </div>
+                                <div class="col-md-4 light-text" style="text-align: left;">reset Filter</div>
+                			</div>
+              			</div>
+            		</div>
+                    <div class="dropmenu" ng-if="filters" role="menu" aria-labelledby="menu1">
+                        <div class="col-md-3 col-lg-3 col-xs-6">
+                            <font class="logofooter"><b>DESTINATIONS</b></font>
+                            <ul class="checkbox-grid">
+                                <li><input type="checkbox" name="text1" value="value1" /><label for="text1">&nbsp;Text 1</label></li>
+                                <li><input type="checkbox" name="text2" value="value2" /><label for="text2">&nbsp;Text 2</label></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xs-6">
+                            <font class="logofooter"><b>DESTINATIONS</b></font>
+                            <ul class="checkbox-grid"> 
+                                <li><input type="checkbox" name="text3" value="value3" /><label for="text3">&nbsp;Text 3</label></li>
+                                <li><input type="checkbox" name="text4" value="value4" /><label for="text4">&nbsp;Text 4</label></li>
+                                <li><input type="checkbox" name="text5" value="value5" /><label for="text5">&nbsp;Text 5</label></li>
+                                <li><input type="checkbox" name="text6" value="value6" /><label for="text6">&nbsp;Text 6</label></li>
+                                <li><input type="checkbox" name="text7" value="value7" /><label for="text7">&nbsp;Text 7</label></li>
+                                <li><input type="checkbox" name="text8" value="value8" /><label for="text8">&nbsp;Text 8</label></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xs-6">
+                            <font class="logofooter"><b>DESTINATIONS</b></font>
+                            <ul class="checkbox-grid"> 
+                                <li><input type="checkbox" name="text3" value="value3" /><label for="text3">&nbsp;Text 3</label></li>
+                                <li><input type="checkbox" name="text4" value="value4" /><label for="text4">&nbsp;Text 4</label></li>
+                                <li><input type="checkbox" name="text5" value="value5" /><label for="text5">&nbsp;Text 5</label></li>
+                                <li><input type="checkbox" name="text6" value="value6" /><label for="text6">&nbsp;Text 6</label></li>
+                                <li><input type="checkbox" name="text7" value="value7" /><label for="text7">&nbsp;Text 7</label></li>
+                                <li><input type="checkbox" name="text8" value="value8" /><label for="text8">&nbsp;Text 8</label></li>
+                            </ul>
+                        </div>  
+                        <div class="col-md-3 col-lg-3 col-xs-6">
+                            <font class=""><b>DESTINATIONS</b></font>
+                            <ul class="checkbox-grid"> 
+                                <li><input type="checkbox" name="text3" value="value3" /><label for="text3">&nbsp;Text 3</label></li>
+                                <li><input type="checkbox" name="text4" value="value4" /><label for="text4">&nbsp;Text 4</label></li>
+                                <li><input type="checkbox" name="text5" value="value5" /><label for="text5">&nbsp;Text 5</label></li>
+                                <li><input type="checkbox" name="text6" value="value6" /><label for="text6">&nbsp;Text 6</label></li>
+                                <li><input type="checkbox" name="text7" value="value7" /><label for="text7">&nbsp;Text 7</label></li>
+                                <li><input type="checkbox" name="text8" value="value8" /><label for="text8">&nbsp;Text 8</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/600x400" alt="">
+                            <div class="float-on-image btn img-btn">ideal <br />for<i></i></div>
+                            <div class="float-text">kerala<i></i></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/600x400" alt="">
+                            <div class="float-on-image btn img-btn">ideal <br />for<i></i></div>
+                            <div class="float-text">kerala<i></i></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+                        <a class="thumbnail" href="#">                   
+                        	<img class="img-responsive" src="http://placehold.it/600x400" alt="">
+                            <div class="float-on-image btn img-btn">ideal <br />for<i></i></div>
+                            <div class="float-text">kerala<i></i></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/600x400" alt="">
+                            <div class="float-on-image btn img-btn">ideal <br />for<i></i></div>
+                            <div class="float-text">kerala<i></i></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/600x400" alt="">
+                            <div class="float-on-image btn img-btn">ideal <br />for<i></i></div>
+                            <div class="float-text">kerala<i></i></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/600x400" alt="">
+                            <div class="float-on-image btn img-btn">ideal <br />for<i></i></div>
+                            <div class="float-text">kerala<i></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>

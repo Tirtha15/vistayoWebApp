@@ -13,6 +13,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
@@ -62,9 +63,8 @@
     <!-- endbuild -->
   </head>
   <body ng-controller="MainCtrl as main">
-  <div ng-show = "main.LoginError" id="myModal" class="modal fade" role="dialog">
+  <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -72,13 +72,69 @@
         <h4 class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+<div class="row sectionHeadingOuter">
+      <div class="col-md-8 col-sm-12" >
+         <div class="col-md-12 card" style="margin-top: 10px; background-color: #e1eef4; border-radius: 0px">
+          <div class="card-block">
+            <p style="color: orange; margin-top: 10px; margin-bottom: 30px; text-align: left">
+              Get an initial amount of Rs 1100 in your wallet. Credited after rst installation. <br />
+              Personalised oers, discounts and holiday suggestions. <br />
+              Privilged access to new features & Priority Support.
+            </p>
+          </div>
+        </div>
+        <div>
+          <form class="" role="search">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 input-group" style="margin-top: 15px">
+                <input type="text" class="form-control" placeholder="Search" name="q">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+          </form>
+        </div>
+        <div><p class="link-text">
+        
+          Designed for those who truly enjoy travel, Vistayo is an exclusive (invite only)<br />
+          platform, that helps you make your every holiday, a great holiday.
+        </p></div>
+        <br />
+        <div class="col-md-12 card" style="margin-top: 10px; background-color: #f3f4f5; border-radius: 0px">
+          <p style="margin-top: 10px; text-align: left" class="logofooter">Planning a holiday in near future? Request an invite</p>
+          <div class="card-block col-md-12">
+            <form class="navbar-form" role="search">
+              <div class="row form-group">
+                <div class="input-group">
+                  <input class="" ng-model="main.inviteEmail" class="form-control" style="padding: 6px" placeholder="userid/email" name="userid" id="userid" type="text">
+                </div>
+                <div class="input-group">
+                  <input class="" class="form-control" ng-model="main.inviteMobile" style="padding: 6px;" placeholder="password" name="password" id="password" type="text">
+                </div>
+                <div class="input-group"> 
+                  <a class="btn btn-md" type="button" ng-click="main.sendInvite()" style="padding: 10px 18px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white"><b>REQUEST INVITE</b></a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+       <div class="row" style="text-align: left">
+        <div style="text-align: right;" class="col-md-6 col-sm-6"><img style="max-height: 150px" src="images/iosphone.png"></div>
+        <div class="col-md-6 col-sm-6"><img style="max-height: 150px" src="images/androidphone.png"></div>
+        <div style="text-align: right;" class="col-md-6 col-sm-6"><img style="max-height: 20px" src="images/appstore_orange.png"></div>
+        <div class="col-md-6 col-sm-6"><img style="max-height: 20px" src="images/playstore_orange.png"></div>
+      </div>
+    </div>
+    <br>
+    <br>
+</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -101,11 +157,11 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav pull-right">
         <a class="nav navbar-nav pull-right top-navlink link-text" style="border-right: none" href="#">We are Hiring</a>
-        <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Downoad App</a>
+        <a class="nav navbar-nav pull-right top-navlink link-text" data-toggle="modal" data-target="#myModal" href="#">Downoad App</a>
         <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Support: +91-1234567890</a>
         <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Travel Stories</a>
-        <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Travel Themes</a>
-        <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Destinations</a>
+        <a class="nav navbar-nav pull-right top-navlink link-text" href="/#!/search">Travel Themes</a>
+        <a class="nav navbar-nav pull-right top-navlink link-text" href="/#!/destination">Destinations</a>
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
           <ul class="dropdown-menu">

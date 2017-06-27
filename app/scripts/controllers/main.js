@@ -1,9 +1,11 @@
 'use strict';
 
-angular.module('mainController', [])
+angular.module('vistayoApp')
   .controller('MainCtrl', function ($rootScope, $location, Auth, $scope, Main) {
     var vm = this;
     vm.loginError = false;
+    vm.inviteMobile = '';
+    vm.inviteEmail = '';
     $rootScope.$on('$routeChangeStart', function() {
 		vm.HomePage = ($location.path()=='/'? true:false);
 		vm.loggedIn = Auth.isLoggedIn();
@@ -11,12 +13,15 @@ angular.module('mainController', [])
 			vm.loginError = true;
 		}
 	});
-    vm.sendInvite = function(mobile, email) {
-    	var response = Main.sendInvitation(mobile, email);
-    	if(response.responseCode == 200) {
+    vm.sendInvite = function() {
+        console.log('sendInvite', vm.inviteMobile, vm.inviteEmail);
+    // 	var response = Main.sendInvitation(vm.inviteEmail, vm.inviteMobile, function(err, response){
+    // 	// if(response.responseCode == 200) {
+    //         alert(response);                
+    // 	// } else {
 
-    	} else {
-
-    	}
-    }
-  })
+    // 	// }
+    // })
+    var response = Main.sendInvitation(vm.inviteEmail, vm.inviteMobile).create();
+  }
+})

@@ -1,4 +1,4 @@
-angular.module('adminService', [])
+angular.module('vistayoApp')
 .factory('Admin', function($http, AuthToken) {
 	var baseUrl = 'http://localhost:80'
 	var adminFactory = {};

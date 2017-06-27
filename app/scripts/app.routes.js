@@ -22,14 +22,19 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-    .when('/about', {
-        templateUrl: 'views/about.html',
+    .when('/search', {
+        templateUrl: 'views/searchpage.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+    .when('/destination', {
+        templateUrl: 'views/destination.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
       })
       .otherwise({
         redirectTo: '/'
       });
     // $locationProvider.html5Mode(true);
-    $locationProvider.hashPrefix('');    
+    // $locationProvider.hashPrefix('');    
   });

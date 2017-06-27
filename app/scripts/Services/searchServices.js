@@ -1,4 +1,4 @@
-angular.module('searchService', [])
+angular.module('vistayoApp')
 .factory('Search', function($http, AuthToken) {
 	var baseUrl = 'http://localhost:80'
 	var searchFactory = {};

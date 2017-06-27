@@ -1,11 +1,11 @@
-angular.module('authService', [])
+angular.module('vistayoApp')
 .factory('Auth', function($http, $q, AuthToken) {
 	var authFactory = {};
 	var baseUrl = 'http://localhost:80'
 
 	authFactory.login = function(mobile, password) {
 
-		return $http.post('/api/v2/user/login', {
+		return $http.post(baseUrl + '/api/v1.0/user/login', {
 			mobile: mobile,
 			password: password
 		})
@@ -17,7 +17,7 @@ angular.module('authService', [])
 
 	authFactory.signup = function(data) {
 
-		return $http.post('/api/v2/user/signup', data)
+		return $http.post('/api/v1.0/user/signup', data)
 		.success(function(data) {
 			AuthToken.setToken(data.aToken);
 			return data;
@@ -26,7 +26,7 @@ angular.module('authService', [])
 
 	authFactory.adminSignup = function(data) {
 
-		return $http.post('/api/v2/user/login', data)
+		return $http.post('/api/v1.0/user/login', data)
 		.success(function(data) {
 			AuthToken.setToken(data.aToken);
 			return data;
@@ -34,7 +34,7 @@ angular.module('authService', [])
 	}
 
 	authFactory.logout = function() {
-		return $http.post('/api/v2/user/logout', {
+		return $http.post('/api/v1.0/user/logout', {
 			mobile: mobile,
 			password: password
 		})
@@ -67,15 +67,15 @@ angular.module('authService', [])
 	}
 	return authTokenFactory;
 })
-.factory('AuthInterceptor', function($q, $location, AuthToken) {
-	var interceptorFactory = {};
+// .factory('AuthInterceptor', function($q, $location, AuthToken) {
+// 	var interceptorFactory = {};
 
-	interceptorFactory.request = function(config) {
-		var token = AuthToken.getToken();
-		if(token) {
-			config.headers['a-access-token'] = token;
-		}
-		return config;
-	};
-	return interceptorFactory;
-});
+// 	interceptorFactory.request = function(config) {
+// 		var token = AuthToken.getToken();
+// 		if(token) {
+// 			config.headers['a-access-token'] = token;
+// 		}
+// 		return config;
+// 	};
+// 	return interceptorFactory;
+// });
