@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <base href="/">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<!--     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -38,7 +41,8 @@
            -moz-transform: scale(1.1);
            -o-transform: scale(1.1);
        }
-       .link-text{color:#a0a3a4; text-align: center; transition: color 0.2s linear 0s, background 0.2s linear 0s;}
+       .orange-text {color:#ff670f;}
+       .link-text{color: #4d5f68; text-align: center; transition: color 0.2s linear 0s, background 0.2s linear 0s;}
        .top-navlink a:hover{transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f;}       
 
        
@@ -59,6 +63,7 @@
        .white {background-color: white}
        .top-navlink {min-width: 100px; margin-top: 10px;padding-left: 20px; padding-right: 20px; border-right: 1px solid #a0a3a4}
        .btn {background-color: #e87706; color:white}
+       .text-right {text-align: right;}
     </style>
     <!-- endbuild -->
   </head>
@@ -100,24 +105,6 @@
           platform, that helps you make your every holiday, a great holiday.
         </p></div>
         <br />
-        <div class="col-md-12 card" style="margin-top: 10px; background-color: #f3f4f5; border-radius: 0px">
-          <p style="margin-top: 10px; text-align: left" class="logofooter">Planning a holiday in near future? Request an invite</p>
-          <div class="card-block col-md-12">
-            <form class="navbar-form" role="search">
-              <div class="row form-group">
-                <div class="input-group">
-                  <input class="" ng-model="main.inviteEmail" class="form-control" style="padding: 6px" placeholder="userid/email" name="userid" id="userid" type="text">
-                </div>
-                <div class="input-group">
-                  <input class="" class="form-control" ng-model="main.inviteMobile" style="padding: 6px;" placeholder="password" name="password" id="password" type="text">
-                </div>
-                <div class="input-group"> 
-                  <a class="btn btn-md" type="button" ng-click="main.sendInvite()" style="padding: 10px 18px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white"><b>REQUEST INVITE</b></a>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
       <div class="col-md-4 col-sm-12">
        <div class="row" style="text-align: left">
@@ -130,6 +117,24 @@
     <br>
     <br>
 </div>
+<div class="col-md-12" style="margin-top: 10px; background-color: #f3f4f5; border-radius: 0px">
+          <p style="margin-top: 10px; text-align: left" class="logofooter">Planning a holiday in near future? Request an invite</p>
+          <div class="card-block col-md-12">
+            <!-- <form class="navbar-form" role="search"> -->
+              
+                <div class="input-group row">
+                  <input class="col-md-4" ng-model="main.inviteEmail" style="padding: 4px" placeholder="userid/email" name="userid" id="userid" type="text">
+                <!-- </div> -->
+                <!-- <div class="input-group col-md-4"> -->
+                  <input class="col-md-4" ng-model="main.inviteMobile" style="padding: 4px;" placeholder="password" name="password" id="password" type="text">
+                <!-- </div> -->
+                <!-- <div class="input-group col-md-4">  -->
+                  <a class="btn btn-md" type="button" ng-click="main.sendInvite()" style="padding: 5px 10px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white"><b>REQUEST INVITE</b></a>
+                </div>
+              <!-- </div> -->
+            <!-- </form> -->
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -147,14 +152,14 @@
     <div class="navbar white" role="navigation">      
     <div class="navbar-header">
       <div class="navbar-header"><div class="navbar-brand"> Vistayo</div></div>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        </button>
+        </button> -->
     </div>
-    <div class="collapse navbar-collapse">
+    <div class="">
       <ul class="nav navbar-nav pull-right">
         <a class="nav navbar-nav pull-right top-navlink link-text" style="border-right: none" href="#">We are Hiring</a>
         <a class="nav navbar-nav pull-right top-navlink link-text" data-toggle="modal" data-target="#myModal" href="#">Downoad App</a>
@@ -175,20 +180,31 @@
         </li> -->
       </ul>
     </div>
-    <div class="col-sm-6 col-md-6 pull-right">
+
+    <div ng-if="!main.loggedIn" class="col-sm-6 col-md-6 pull-right">
+    {{main.loggedIn}}
       <form class="navbar-form" role="search">
       <div class="row form-group">
           <div class="input-group">
-            <input class="" class="form-control" style="padding: 6px 12px" placeholder="userid/email" name="userid" id="userid" type="text">
+            <input class="" style="padding: 6px 12px" ng-model = "userid" placeholder="mobile" name="userid" id="userid" type="text">
           </div>
           <div class="input-group">
-            <input class="" class="form-control" style="padding: 6px 12px;" placeholder="password" name="password" id="password" type="text">
+            <input class="" style="padding: 6px 12px;" ng-model="pass" placeholder="password" name="password" id="password" type="password">
           </div>
           <div class="input-group"> 
-            <a class="btn btn-md" type="button" style="padding: 10px 18px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white">Login</a>
+            <a class="btn btn-md" type="button" ng-click="main.login(userid, pass)" style="padding: 10px 18px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white">Login</a>
           </div>
         </div>
       </form>
+    </div>
+    <div ng-if="main.loggedIn" class="col-sm-6 col-md-6 pull-right text-right">
+    <div>    
+      <div class="">
+      <ul class="nav navbar-nav pull-right">
+        <div><h3 class="orange-text">Welcome, Tirtha!</h3></div>
+        <a class="nav navbar-nav pull-right top-navlink col-md-6 link-text" style="border-right: none" href="#">Account&nbsp;Balance:&nbsp;1100</a>
+        <a class="nav navbar-nav pull-right col-md-6 top-navlink link-text" href="#">Notification&nbsp;<i class="fa fa-bell" aria-hidden="true"></i></a></ul>
+        </div>
     </div>
   </div>
 <!-- <div class="navbar navbar-static-top" role="navigation"> 
@@ -241,8 +257,8 @@
       <div class="col-md-6 col-sm-6 footerleft">
         <div class="logofooter">DOWNLOAD OUR SELLER APPS FROM HERE</div>
         <div class="row">
-              <div class="col-sm-6 col-md-5" style="text-align: right;"><img src="images/google.png" style="max-height: 50px;" alt="play stores"></div>
-              <div class="col-sm-6 col-md-5"><img src="images/appstore.png" style="max-height: 50px;" alt="app stores"></div>
+              <div class="col-sm-6 col-md-5 col-xs-6" style="text-align: right;"><img src="images/google.png" style="max-height: 50px;" alt="play stores"></div>
+              <div class="col-sm-6 col-md-5 col-xs-6"><img src="images/appstore.png" style="max-height: 50px;" alt="app stores"></div>
         </div>
       </div>
       <div class="col-md-2 col-sm-2 paddingtop-bottom">
@@ -259,19 +275,19 @@
       <div class="col-md-4 col-sm-4 paddingtop-bottom">
         <div class="logofooter">SOCIAL</div>
         <div class="row">
-          <div class="col-sm-2">
+          <div class="col-sm-2 col-md-2 col-xs-2">
             <img style="max-height: 50px" src="images/linkedin_circle.png">
           </div>
-          <div class="col-sm-2">
+          <div class="col-sm-2 col-md-2 col-xs-2">
             <img style="max-height: 50px" src="images/facebook_circle.png">
           </div>
-          <div class="col-sm-2">
+          <div class="col-sm-2 col-md-2 col-xs-2">
             <img style="max-height: 50px" src="images/googleplus-circle.png">
           </div>
-          <div class="col-sm-2">
+          <div class="col-sm-2 col-md-2 col-xs-2">
             <img style="max-height: 50px" src="images/twitter_circle.png">
           </div>
-          <div class="col-sm-2">
+          <div class="col-sm-2 col-md-2 col-xs-2">
             <img style="max-height: 50px" src="images/Youtube-circle.png">
           </div>
         </div>
@@ -317,6 +333,8 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

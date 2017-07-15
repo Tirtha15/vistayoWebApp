@@ -1,35 +1,44 @@
 angular.module('vistayoApp')
 .factory('Auth', function($http, $q, AuthToken) {
 	var authFactory = {};
-	var baseUrl = 'http://localhost:80'
+	var baseUrl = 'http://localhost:8000'
 
-	authFactory.login = function(mobile, password) {
+	authFactory.login = function(mobile, password, callback) {
 
-		return $http.post(baseUrl + '/api/v1.0/user/login', {
+		$http.post(baseUrl + '/api/v1.0/user/login', {
 			mobile: mobile,
 			password: password
 		})
-		.success(function(data) {
-			AuthToken.setToken(data.aToken);
-			return data;
+		.then(function(data) {
+			AuthToken.setToken(data.data.aToken);
+			callback (null, data);
+			}, function(err) {
+			AuthToken.setToken();
+			callback (err, null);
 		})
 	}
 
 	authFactory.signup = function(data) {
 
 		return $http.post('/api/v1.0/user/signup', data)
-		.success(function(data) {
-			AuthToken.setToken(data.aToken);
+		.then(function(data) {
+			AuthToken.setToken(data.data.aToken);
 			return data;
+		}, function(err) {
+			AuthToken.setToken();
+			return err;
 		})
 	}
 
 	authFactory.adminSignup = function(data) {
 
 		return $http.post('/api/v1.0/user/login', data)
-		.success(function(data) {
-			AuthToken.setToken(data.aToken);
+		.then(function(data) {
+			AuthToken.setToken(data.data.aToken);
 			return data;
+		}, function(err) {
+			AuthToken.setToken();
+			return err;
 		})
 	}
 
@@ -38,9 +47,12 @@ angular.module('vistayoApp')
 			mobile: mobile,
 			password: password
 		})
-		.success(function(data) {
+		.then(function(data) {
 			AuthToken.setToken();
 			return data;
+		}, function(err) {
+			AuthToken.setToken();
+			return err;
 		})
 	}
 
@@ -67,15 +79,16 @@ angular.module('vistayoApp')
 	}
 	return authTokenFactory;
 })
-// .factory('AuthInterceptor', function($q, $location, AuthToken) {
-// 	var interceptorFactory = {};
+.factory('AuthInterceptor', function($q, $location, AuthToken) {
+	var interceptorFactory = {};
 
-// 	interceptorFactory.request = function(config) {
-// 		var token = AuthToken.getToken();
-// 		if(token) {
-// 			config.headers['a-access-token'] = token;
-// 		}
-// 		return config;
-// 	};
-// 	return interceptorFactory;
-// });
+	interceptorFactory.request = function(config) {
+		console.log('called');
+		var token = AuthToken.getToken();
+		if(token) {
+			config.headers['a-access-token'] = token;
+		}
+		return config;
+	};
+	return interceptorFactory;
+});

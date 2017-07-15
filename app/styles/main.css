@@ -159,6 +159,14 @@ body {
 
 .float-text {
   position: absolute; 
+  top: 120px;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+}
+
+.float-text-full {
+  position: absolute; 
   top: 200px;
   padding: 20px;
   color: white;
@@ -171,7 +179,7 @@ body {
 }
 
 .bg-orange {
-  background-color: #e87706; color:white
+  background-color: #e87706; color: white
 }
 
 .img-btn {
@@ -219,9 +227,9 @@ input[type=checkbox]:checked {
 }
 
 label {
-  font-size: 10px;
-  color: #5a7391;
-}
+  font-size: 12px;
+/*  color: #5a7391;
+*/}
 input[type=checkbox] {
   width: 20px;
   position: relative;
@@ -318,6 +326,68 @@ box-shadow: 0px 0px 0px 1px #5a7391;
 }
 
 .blue-text {
-  color: #4d4d78;
+  color: #4d5f68;
+  margin-top: 0px;
 
+}
+
+.grey-text {
+  color: #b1b8bc;
+}
+
+.bottom-border {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #bec6cb;
+  color: #5a7391;
+}
+
+.bottom-border:focus{
+  color: #5a7391;
+  border-color: #5a7391;
+}
+
+.planlist li:nth-child(even){
+  background-color: #f7f7fe;
+}
+.planlist li:nth-child(odd){
+  background-color: white;
+}
+
+
+/* For medium screen */    
+/*@media (min-width: 768px) {
+    .planlist li:nth-child(4n), .planlist li:nth-child(4n-1) {
+        background: #dcdcdc;
+    }
+    .planlist li:nth-child(4n-2), .planlist li:nth-child(4n-3) {
+        background: #aaaaaa;
+    }
+}
+
+@media (min-width: 992px) {
+    .planlist li:nth-child(6n), .planlist li:nth-child(6n-1), .planlist li:nth-child(6n-2) {
+        background: #dcdcdc;
+    }
+    .planlist li:nth-child(6n-3), .planlist li:nth-child(6n-4), .planlist li:nth-child(6n-5) {
+        background: #aaaaaa;
+    }
+}*/
+.modal-content {
+  z-index: 10000px;
+}
+
+.card-header-grey {
+  background-color: #eceded;
+}
+
+.card-div {
+  margin-top:5px;
+  margin-bottom:5px;  
+  text-align: center;
+}
+
+.card-div > p {
+  margin: 0px;
 }

@@ -32,9 +32,25 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+    .when('/newtrip', {
+        templateUrl: 'views/newtrip.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+    .when('/setting', {
+        templateUrl: 'views/setting.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+    .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
       .otherwise({
         redirectTo: '/'
       });
-    // $locationProvider.html5Mode(true);
-    // $locationProvider.hashPrefix('');    
+    // $locationProvider.html5Mode({
+    //   enabled: true
+    // });  
   });
