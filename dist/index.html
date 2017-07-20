@@ -1,0 +1,69 @@
+<!doctype html> <html ng-app="vistayoApp"> <head> <meta charset="utf-8"> <title></title> <base href="/"> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.5a447d30.css"> <link rel="stylesheet" href="styles/main.55009bb9.css"> </head> <body ng-controller="MainCtrl as main"> <div id="myModal" class="modal fade" role="dialog"> <div class="modal-dialog"> <!-- Modal content--> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal">&times;</button> <h4 class="modal-title">Modal Header</h4> </div> <div class="modal-body"> <div class="row sectionHeadingOuter"> <div class="col-md-8 col-sm-12"> <div class="col-md-12 card" style="margin-top: 10px; background-color: #e1eef4; border-radius: 0px"> <div class="card-block"> <p style="color: orange; margin-top: 10px; margin-bottom: 30px; text-align: left"> Get an initial amount of Rs 1100 in your wallet. Credited after rst installation. <br> Personalised oers, discounts and holiday suggestions. <br> Privilged access to new features & Priority Support. </p> </div> </div> <div> <form class="" role="search"> <div class="col-md-1"></div> <div class="col-md-10 input-group" style="margin-top: 15px"> <input type="text" class="form-control" placeholder="Search" name="q"> <div class="input-group-btn"> <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button> </div> </div> </form> </div> <div><p class="link-text"> Designed for those who truly enjoy travel, Vistayo is an exclusive (invite only)<br> platform, that helps you make your every holiday, a great holiday. </p></div> <br> </div> <div class="col-md-4 col-sm-12"> <div class="row" style="text-align: left"> <div style="text-align: right" class="col-md-6 col-sm-6"><img style="max-height: 150px" src="images/iosphone.44b04436.png"></div> <div class="col-md-6 col-sm-6"><img style="max-height: 150px" src="images/androidphone.352c2a9c.png"></div> <div style="text-align: right" class="col-md-6 col-sm-6"><img style="max-height: 20px" src="images/appstore_orange.f1d40d93.png"></div> <div class="col-md-6 col-sm-6"><img style="max-height: 20px" src="images/playstore_orange.48199a4b.png"></div> </div> </div> <br> <br> </div> <div class="col-md-12" style="margin-top: 10px; background-color: #f3f4f5; border-radius: 0px"> <p style="margin-top: 10px; text-align: left" class="logofooter">Planning a holiday in near future? Request an invite</p> <div class="card-block col-md-12"> <!-- <form class="navbar-form" role="search"> --> <div class="input-group row"> <input class="col-md-4" ng-model="main.inviteEmail" style="padding: 4px" placeholder="userid/email" name="userid" id="userid" type="text"> <!-- </div> --> <!-- <div class="input-group col-md-4"> --> <input class="col-md-4" ng-model="main.inviteMobile" style="padding: 4px" placeholder="password" name="password" id="password" type="text"> <!-- </div> --> <!-- <div class="input-group col-md-4">  --> <a class="btn btn-md" type="button" ng-click="main.sendInvite()" style="padding: 5px 10px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white"><b>REQUEST INVITE</b></a> </div> <!-- </div> --> <!-- </form> --> </div> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div> </div> </div> </div> <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <!-- Add your site or application content here --> <div class="header"> <div class="navbar white" role="navigation"> <div class="navbar-header"> <div class="navbar-header"><div class="navbar-brand"> Vistayo</div></div> <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button> --> </div> <div class=""> <ul class="nav navbar-nav pull-right"> <a class="nav navbar-nav pull-right top-navlink link-text" style="border-right: none" href="#">We are Hiring</a> <a class="nav navbar-nav pull-right top-navlink link-text" data-toggle="modal" data-target="#myModal" href="#">Downoad App</a> <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Support: +91-1234567890</a> <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Travel Stories</a> <a class="nav navbar-nav pull-right top-navlink link-text" href="/#!/search">Travel Themes</a> <a class="nav navbar-nav pull-right top-navlink link-text" href="/#!/destination">Destinations</a> <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li> --> </ul> </div> <div ng-if="!main.loggedIn" class="col-sm-6 col-md-6 pull-right"> {{main.loggedIn}} <form class="navbar-form" role="search"> <div class="row form-group"> <div class="input-group"> <input class="" style="padding: 6px 12px" ng-model="userid" placeholder="mobile" name="userid" id="userid" type="text"> </div> <div class="input-group"> <input class="" style="padding: 6px 12px" ng-model="pass" placeholder="password" name="password" id="password" type="password"> </div> <div class="input-group"> <a class="btn btn-md" type="button" ng-click="main.login(userid, pass)" style="padding: 10px 18px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white">Login</a> </div> </div> </form> </div> <div ng-if="main.loggedIn" class="col-sm-6 col-md-6 pull-right text-right"> <div> <div class=""> <ul class="nav navbar-nav pull-right"> <div><h3 class="orange-text">Welcome, Tirtha!</h3></div> <a class="nav navbar-nav pull-right top-navlink col-md-6 link-text" style="border-right: none" href="#">Account&nbsp;Balance:&nbsp;1100</a> <a class="nav navbar-nav pull-right col-md-6 top-navlink link-text" href="#">Notification&nbsp;<i class="fa fa-bell" aria-hidden="true"></i></a></ul> </div> </div> </div> <!-- <div class="navbar navbar-static-top" role="navigation"> 
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+        </li>
+    </ul>
+    <button type="button" class="btn btn-default navbar-btn">Button</button>
+    <div class="col-sm-3 col-md-3 pull-right">
+      <div class="navbar-text">Text</div>
+      <form class="navbar-form" role="search">
+      <div class="input-group">
+        <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div> --> </div> <div style="background-color: white" class="col-md-12 col-sm-12 col-lg-12"> <div ng-view=""></div> </div> <div class="footer" style="background-color: #e1eef4"> <div class="row"> <div class="col-md-6 col-sm-6 footerleft"> <div class="logofooter">DOWNLOAD OUR SELLER APPS FROM HERE</div> <div class="row"> <div class="col-sm-6 col-md-5 col-xs-6" style="text-align: right"><img src="images/google.48c346d8.png" style="max-height: 50px" alt="play stores"></div> <div class="col-sm-6 col-md-5 col-xs-6"><img src="images/appstore.c81a0176.png" style="max-height: 50px" alt="app stores"></div> </div> </div> <div class="col-md-2 col-sm-2 paddingtop-bottom"> <div class="logofooter">SITE MAP</div> <ul class="footer-ul"> <li><a href="#"> Home</a></li> <li><a href="#"> Vistayo Advantage</a></li> <li><a href="#"> Resouces</a></li> <li><a href="#"> Seller Diaries</a></li> <li><a href="#"> Ranking</a></li> <li><a href="#"> FAQs</a></li> </ul> </div> <div class="col-md-4 col-sm-4 paddingtop-bottom"> <div class="logofooter">SOCIAL</div> <div class="row"> <div class="col-sm-2 col-md-2 col-xs-2"> <img style="max-height: 50px" src="images/linkedin_circle.bb01d534.png"> </div> <div class="col-sm-2 col-md-2 col-xs-2"> <img style="max-height: 50px" src="images/facebook_circle.6c552179.png"> </div> <div class="col-sm-2 col-md-2 col-xs-2"> <img style="max-height: 50px" src="images/googleplus-circle.97e4d6d6.png"> </div> <div class="col-sm-2 col-md-2 col-xs-2"> <img style="max-height: 50px" src="images/twitter_circle.a081bcd8.png"> </div> <div class="col-sm-2 col-md-2 col-xs-2"> <img style="max-height: 50px" src="images/Youtube-circle.fef4575c.png"> </div> </div> </div> <!-- <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+          </div>
+        </div>
+      </div> --> </div> </div>  <!--footer start from here--> <div class="copyright" style="background-color: #e1eef4"> <div class="container"> <div class="col-md-12"> <p class="link-text">© 2017 - Yastayo. All Rights Reserved</p> </div> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');</script> <script src="scripts/vendor.6ee89489.js"></script> <!-- angular app --> <script src="scripts/app.js"></script> <script src="scripts/app.routes.js"></script> <!-- Controller --> <script src="scripts/controllers/main.js"></script> <script src="scripts/controllers/about.js"></script> <!-- Services --> <script src="scripts/Services/authServices.js"></script> <script src="scripts/Services/searchServices.js"></script> <script src="scripts/Services/mainServices.js"></script> <script src="scripts/Services/adminServices.js"></script> </div></body> </html>

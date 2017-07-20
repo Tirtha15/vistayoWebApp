@@ -8,7 +8,7 @@ angular.module('vistayoApp')
     vm.inviteEmail = '';
 
     $rootScope.$on('$routeChangeStart', function() {
-		vm.homePage = ($location.path()=='/'? true:false);
+		vm.homePage = ($location.path()==='/'? true:false);
         console.log(vm.homePage, Auth.isLoggedIn());
 		vm.loggedIn = Auth.isLoggedIn();
 		if (vm.loggedIn === false && vm.homePage === false) {
@@ -22,7 +22,7 @@ angular.module('vistayoApp')
         console.log('sendInvite', vm.inviteMobile, vm.inviteEmail);
     	var response = Main.sendInvitation(vm.inviteEmail, vm.inviteMobile, function(err, response){
     	   console.log('response', response);
-           if(response.responseCode == 200) {
+           if(response.responseCode === 200) {
                 
     	   } else {
 

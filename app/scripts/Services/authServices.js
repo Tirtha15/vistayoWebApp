@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('vistayoApp')
 .factory('Auth', function($http, $q, AuthToken) {
 	var authFactory = {};

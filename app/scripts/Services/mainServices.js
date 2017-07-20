@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('vistayoApp')
 .factory('Main', function($http) {
 	var baseUrl = 'http://localhost:8000'
