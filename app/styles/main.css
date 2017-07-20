@@ -1,3 +1,4 @@
+
 .browsehappy {
   margin: 0.2em 0px;
   background: #ccc;
@@ -9,7 +10,7 @@ body {
   padding: 0px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+
 .header,
 .marketing,
 .footer {
@@ -17,12 +18,13 @@ body {
   padding-right: 15px;
 }
 
-/* Custom page header */
+
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 }
-/* Make the masthead heading the same height as the navigation */
+
+
 .header h3 {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -30,7 +32,7 @@ body {
   padding-bottom: 19px;
 }
 
-/* Custom page footer */
+
 .footer {
   padding-top: 19px;
   color: #777;
@@ -41,7 +43,7 @@ body {
   margin: 30px 0px;
 }
 
-/* Main marketing message and sign up button */
+
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
@@ -51,7 +53,7 @@ body {
   padding: 14px 24px;
 }
 
-/* Supporting marketing content */
+
 .marketing {
   margin: 40px 0px;
 }
@@ -59,43 +61,29 @@ body {
   margin-top: 28px;
 }
 
-/* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
   }
 
-  /* Remove the padding we set earlier */
+
   .header,
   .marketing,
   .footer {
     padding-left: 0px;
     padding-right: 0px;
   }
-  /* Space out the masthead */
+
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
+
   .jumbotron {
     border-bottom: 0px;
   }
 }
 
 /*.g-checkbox {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: gray;
-}
-
-.g-checkbox:hover { background:blue;}
-
-.g-checkbox.checked {
-  background: green;
-}*/
-
-.g-checkbox {
   width: 80px;
   height: 26px;
   background: #333;
@@ -108,53 +96,37 @@ body {
     color: #000;
     position: absolute;
     right: 10px;
-/*    z-index: 0;*/
     font: 12px/26px Arial, sans-serif;
     font-weight: bold;
-    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.15);
   }
   &:before {
     content: 'ON';
     color: $activeColor;
     position: absolute;
     left: 10px;
-/*    z-index: 0;*/
     font: 12px/26px Arial, sans-serif;
     font-weight: bold;
   }
-  /*label {
-    display: block;
-    width: 34px;
-    height: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    z-index: 1;
-    background: #fcfff4;
-    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-    border-radius: 50px;
-    transition: all 0.4s ease;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
-  }*/
+
   input[type=checkbox] {
     visibility: hidden;
     &:checked + label {
       left: 43px;
     }
   }    
-}
+}*/
 
 .border-btn {
   background-color: white;
   border-color: #e87706;
 }
 
+
+
 .float-on-image { 
    position: absolute; 
     top: 50px;
-   /*left: 0; */
-/*   width: 100%;*/ 
 }
 
 .float-text {
@@ -175,7 +147,7 @@ body {
 
 .img-responsive { 
    position: relative; 
-   width: 100%; /* for IE 6 */
+   width: 100%; 
 }
 
 .bg-orange {
@@ -196,49 +168,30 @@ body {
 .checkbox-grid li {
     display: block;
     text-align: left;
-/*    width: 25%;*/
+
 }
 
 .checkbox-grid {
   padding-left: 0px;
 }
 
-/*.dropdown-menu {
-  width: 100%;
-  border: none;
-  border-bottom: 1px;
-  background: none;
-}
-
-.open > .dropdown-menu {
-    display: inline-block;
-}*/
-
-.dropmenu {
-  /*border-bottom: px solid black;*/
-}
 input[type=checkbox]:checked {
     border:2px solid green;
     font-size:24px;
-      background: transparent;
-/*      opacity: 0;*/
-      /*transform: rotate(-45deg);*/
-
+    background: transparent;
 }
 
 label {
   font-size: 12px;
-/*  color: #5a7391;
-*/}
+}
+
 input[type=checkbox] {
   width: 20px;
   position: relative;
   margin: 20px auto;
-
-
--webkit-box-shadow: 0px 0px 0px 1px #5a7391;
--moz-box-shadow: 0px 0px 0px 1px #5a7391;
-box-shadow: 0px 0px 0px 1px #5a7391;
+  webkit-box-shadow: 0px 0px 0px 1px #5a7391;
+  -moz-box-shadow: 0px 0px 0px 1px #5a7391;
+  box-shadow: 0px 0px 0px 1px #5a7391;
   label {
     font-size: 10px;
     cursor: pointer;
@@ -299,9 +252,6 @@ box-shadow: 0px 0px 0px 1px #5a7391;
     margin-right: auto;
     margin-top: 3px;
     margin-bottom: 3px;
-/*    width: 50%;*/
-  /*  border: 3px solid green;*/
-    /*padding: 10px;*/
 } 
 
 .card-block {
@@ -318,11 +268,11 @@ box-shadow: 0px 0px 0px 1px #5a7391;
 }
 
 .wordwrap { 
-   white-space: pre-wrap;      /* CSS3 */   
-   white-space: -moz-pre-wrap; /* Firefox */    
-   white-space: -pre-wrap;     /* Opera <7 */   
-   white-space: -o-pre-wrap;   /* Opera 7 */    
-   word-wrap: break-word;      /* IE */
+   white-space: pre-wrap;        
+   white-space: -moz-pre-wrap;    
+   white-space: -pre-wrap;       
+   white-space: -o-pre-wrap;      
+   word-wrap: break-word;     
 }
 
 .blue-text {
@@ -336,8 +286,8 @@ box-shadow: 0px 0px 0px 1px #5a7391;
 }
 
 .bottom-border {
-  border: 0;
-  outline: 0;
+  border: 0px;
+  outline: 0px;
   background: transparent;
   border-bottom: 1px solid #bec6cb;
   color: #5a7391;
@@ -355,25 +305,6 @@ box-shadow: 0px 0px 0px 1px #5a7391;
   background-color: white;
 }
 
-
-/* For medium screen */    
-/*@media (min-width: 768px) {
-    .planlist li:nth-child(4n), .planlist li:nth-child(4n-1) {
-        background: #dcdcdc;
-    }
-    .planlist li:nth-child(4n-2), .planlist li:nth-child(4n-3) {
-        background: #aaaaaa;
-    }
-}
-
-@media (min-width: 992px) {
-    .planlist li:nth-child(6n), .planlist li:nth-child(6n-1), .planlist li:nth-child(6n-2) {
-        background: #dcdcdc;
-    }
-    .planlist li:nth-child(6n-3), .planlist li:nth-child(6n-4), .planlist li:nth-child(6n-5) {
-        background: #aaaaaa;
-    }
-}*/
 .modal-content {
   z-index: 10000px;
 }
