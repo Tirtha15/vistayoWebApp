@@ -2,12 +2,12 @@
 
 angular.module('vistayoApp')
 .factory('Search', function($http, AuthToken) {
-	var baseUrl = 'http://localhost:80'
+	var baseUrl = 'http://localhost:8000'
 	var searchFactory = {};
 	var token = AuthToken.getToken();
-	searchFactory.authCompleteSearch = function(term, callback) {
+	searchFactory.authCompleteSearch = function(callback) {
 		$http({
-			url:'api/v2/holidays/suggest',
+			url:baseUrl + 'api/v2/holidays/suggest',
 			method:'GET',
 			headers:{'a-access-token': token},
 			params: {

@@ -22,6 +22,17 @@ angular
     // 'mainService',
     // 'mainController'
   ])
+  .directive('autoComplete', ['Search', function(Search) {
+    return {
+      restrict: 'A',
+      link: function(scope, elem, attr, ctrl) {
+            elem.autocomplete({
+                source: Search.authCompleteSearch(),
+                minLength: 2
+            });
+        }
+    }
+  }])
   // .config(function($httpProvider) {
   //   $httpProvider.interceptors.push('AuthInterceptor');
   // })

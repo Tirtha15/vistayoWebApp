@@ -1,0 +1,351 @@
+<!doctype html>
+<html ng-app="vistayoApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <base href="/">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+      footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
+      .footerleft { margin-top:50px; padding:0 36px; }
+      .logofooter { margin-bottom:10px; font-size:15px; color:#4d5f68; font-weight:700;}
+      .navbar-brand { margin-bottom:10px; font-size:25px; color:#4d5f68; font-weight:700;}
+      .footerleft p { color:#4d5f68; font-size:12px !important; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
+      .footerleft p i { width:20px; color:#999;}
+
+      a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f; }
+      .paddingtop-bottom {  margin-top:50px;}
+      .footer-ul { list-style-type:none;  padding-left:0px; margin-left:2px;}
+      .footer-ul li { line-height:29px; font-size:12px;}
+      .footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
+      .footer-ul i { margin-right:10px;}
+      .footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f; }
+
+      .social:hover {
+           -webkit-transform: scale(1.1);
+           -moz-transform: scale(1.1);
+           -o-transform: scale(1.1);
+       }
+       .orange-text {color:#ff670f;}
+       .link-text{color: #4d5f68; text-align: center; transition: color 0.2s linear 0s, background 0.2s linear 0s;}
+       .top-navlink a:hover{transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f;}       
+
+       
+       .icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
+       .icon-ul li { line-height:75px; width:100%; float:left;}
+       .icon { float:left; margin-right:5px;}
+       
+       
+       .copyright { min-height:40px; background-color:#000000;}
+       .copyright p { text-align:left; text-align: center; color:#4d5f68; padding:10px 0; margin-bottom:0px;}
+       .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
+       .post p { font-size:12px; color:#FFF; line-height:20px;}
+       .post p span { display:block; color:#8f8f8f;}
+       .bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
+       .bottom_ul li { float:left; line-height:40px;}
+       .bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
+       .bottom_ul li a { color:#FFF;  font-size:12px;}
+       .white {background-color: white}
+       .top-navlink {min-width: 100px; margin-top: 10px;padding-left: 20px; padding-right: 20px; border-right: 1px solid #a0a3a4}
+       .btn {background-color: #e87706; color:white}
+       .text-right {text-align: right;}
+    </style>
+    <!-- endbuild -->
+  </head>
+  <body ng-controller="MainCtrl as main">
+  <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+<div class="row sectionHeadingOuter">
+      <div class="col-md-8 col-sm-12" >
+         <div class="col-md-12 card" style="margin-top: 10px; background-color: #e1eef4; border-radius: 0px">
+          <div class="card-block">
+            <p style="color: orange; margin-top: 10px; margin-bottom: 30px; text-align: left">
+              Get an initial amount of Rs 1100 in your wallet. Credited after rst installation. <br />
+              Personalised oers, discounts and holiday suggestions. <br />
+              Privilged access to new features & Priority Support.
+            </p>
+          </div>
+        </div>
+        <div>
+          <form class="" role="search">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 input-group" style="margin-top: 15px">
+                <input type="text" class="form-control" placeholder="Search" name="q">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+          </form>
+        </div>
+        <div><p class="link-text">
+        
+          Designed for those who truly enjoy travel, Vistayo is an exclusive (invite only)<br />
+          platform, that helps you make your every holiday, a great holiday.
+        </p></div>
+        <br />
+      </div>
+      <div class="col-md-4 col-sm-12">
+       <div class="row" style="text-align: left">
+        <div style="text-align: right;" class="col-md-6 col-sm-6"><img style="max-height: 150px" src="images/iosphone.png"></div>
+        <div class="col-md-6 col-sm-6"><img style="max-height: 150px" src="images/androidphone.png"></div>
+        <div style="text-align: right;" class="col-md-6 col-sm-6"><img style="max-height: 20px" src="images/appstore_orange.png"></div>
+        <div class="col-md-6 col-sm-6"><img style="max-height: 20px" src="images/playstore_orange.png"></div>
+      </div>
+    </div>
+    <br>
+    <br>
+</div>
+<div class="col-md-12" style="margin-top: 10px; background-color: #f3f4f5; border-radius: 0px">
+          <p style="margin-top: 10px; text-align: left" class="logofooter">Planning a holiday in near future? Request an invite</p>
+          <div class="card-block col-md-12">
+            <!-- <form class="navbar-form" role="search"> -->
+              
+                <div class="input-group row">
+                  <input class="col-md-4" ng-model="main.inviteEmail" style="padding: 4px" placeholder="userid/email" name="userid" id="userid" type="text">
+                <!-- </div> -->
+                <!-- <div class="input-group col-md-4"> -->
+                  <input class="col-md-4" ng-model="main.inviteMobile" style="padding: 4px;" placeholder="password" name="password" id="password" type="text">
+                <!-- </div> -->
+                <!-- <div class="input-group col-md-4">  -->
+                  <a class="btn btn-md" type="button" ng-click="main.sendInvite()" style="padding: 5px 10px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white"><b>REQUEST INVITE</b></a>
+                </div>
+              <!-- </div> -->
+            <!-- </form> -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+  <div class="header">
+    <div class="navbar white" role="navigation">      
+    <div class="navbar-header">
+      <div class="navbar-header"><div class="navbar-brand"> Vistayo</div></div>
+        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button> -->
+    </div>
+    <div class="">
+      <ul class="nav navbar-nav pull-right">
+        <a class="nav navbar-nav pull-right top-navlink link-text" style="border-right: none" href="#">We are Hiring</a>
+        <a class="nav navbar-nav pull-right top-navlink link-text" data-toggle="modal" data-target="#myModal" href="#">Downoad App</a>
+        <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Support: +91-1234567890</a>
+        <a class="nav navbar-nav pull-right top-navlink link-text" href="#">Travel Stories</a>
+        <a class="nav navbar-nav pull-right top-navlink link-text" href="/#!/search">Travel Themes</a>
+        <a class="nav navbar-nav pull-right top-navlink link-text" href="/#!/destination">Destinations</a>
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+
+    <div ng-if="!main.loggedIn" class="col-sm-6 col-md-6 pull-right">
+      <form class="navbar-form" role="search">
+      <div class="row form-group">
+          <div class="input-group">
+            <input class="" style="padding: 6px 12px" ng-model = "userid" placeholder="mobile" name="userid" id="userid" type="text">
+          </div>
+          <div class="input-group">
+            <input class="" style="padding: 6px 12px;" ng-model="pass" placeholder="password" name="password" id="password" type="password">
+          </div>
+          <div class="input-group"> 
+            <a class="btn btn-md" type="button" ng-click="main.login(userid, pass)" style="padding: 10px 18px; min-width: 80px; border-radius: 4px; background-color: #e87706; color:white">Login</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div ng-if="main.loggedIn" class="col-sm-6 col-md-6 pull-right text-right">
+    <div>    
+      <div class="">
+      <ul class="nav navbar-nav pull-right">
+        <div><h3 class="orange-text">Welcome, Tirtha!</h3></div>
+        <a class="nav navbar-nav pull-right top-navlink col-md-6 link-text" style="border-right: none" href="#">Account&nbsp;Balance:&nbsp;1100</a>
+        <a class="nav navbar-nav pull-right col-md-6 top-navlink link-text" href="#">Notification&nbsp;<i class="fa fa-bell" aria-hidden="true"></i></a></ul>
+        </div>
+    </div>
+  </div>
+<!-- <div class="navbar navbar-static-top" role="navigation"> 
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+        </li>
+    </ul>
+    <button type="button" class="btn btn-default navbar-btn">Button</button>
+    <div class="col-sm-3 col-md-3 pull-right">
+      <div class="navbar-text">Text</div>
+      <form class="navbar-form" role="search">
+      <div class="input-group">
+        <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+</div>
+    <div style="background-color: white" class="col-md-12 col-sm-12 col-lg-12">
+      <div ng-view=""></div>
+    </div>
+
+     <div class="footer" style="background-color: #e1eef4">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 footerleft">
+        <div class="logofooter">DOWNLOAD OUR SELLER APPS FROM HERE</div>
+        <div class="row">
+              <div class="col-sm-6 col-md-5 col-xs-6" style="text-align: right;"><img src="images/google.png" style="max-height: 50px;" alt="play stores"></div>
+              <div class="col-sm-6 col-md-5 col-xs-6"><img src="images/appstore.png" style="max-height: 50px;" alt="app stores"></div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-2 paddingtop-bottom">
+        <div class="logofooter">SITE MAP</div>
+        <ul class="footer-ul">
+          <li><a href="#"> Home</a></li>
+          <li><a href="#"> Vistayo Advantage</a></li>
+          <li><a href="#"> Resouces</a></li>
+          <li><a href="#"> Seller Diaries</a></li>
+          <li><a href="#"> Ranking</a></li>
+          <li><a href="#"> FAQs</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-4 paddingtop-bottom">
+        <div class="logofooter">SOCIAL</div>
+        <div class="row">
+          <div class="col-sm-2 col-md-2 col-xs-2">
+            <img style="max-height: 50px" src="images/linkedin_circle.png">
+          </div>
+          <div class="col-sm-2 col-md-2 col-xs-2">
+            <img style="max-height: 50px" src="images/facebook_circle.png">
+          </div>
+          <div class="col-sm-2 col-md-2 col-xs-2">
+            <img style="max-height: 50px" src="images/googleplus-circle.png">
+          </div>
+          <div class="col-sm-2 col-md-2 col-xs-2">
+            <img style="max-height: 50px" src="images/twitter_circle.png">
+          </div>
+          <div class="col-sm-2 col-md-2 col-xs-2">
+            <img style="max-height: 50px" src="images/Youtube-circle.png">
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright" style="background-color: #e1eef4">
+  <div class="container">
+    <div class="col-md-12">
+      <p class="link-text">© 2017 - Yastayo. All Rights Reserved</p>
+    </div>
+  </div>
+</div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- angular app -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/app.routes.js"></script>  
+        <!-- Controller -->
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- Services -->
+        <script src="scripts/Services/authServices.js"></script> 
+        <script src="scripts/Services/searchServices.js"></script> 
+        <script src="scripts/Services/mainServices.js"></script> 
+        <script src="scripts/Services/adminServices.js"></script> 
+</body>
+</html>

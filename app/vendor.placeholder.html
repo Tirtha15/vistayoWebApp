@@ -6,16 +6,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<title>Vistayo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">      
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-  <script src="http://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-  <style type="text/css">
+    <style type="text/css">
         @font-face {
             font-family: Avenir;
-            src: "./fonts/AvenirLTStd-Medium.otf"X-UA-Compatible;
+            src: url(./fonts/AvenirLTStd-Medium.otf);
         }
         .main-header {
             font: Avenir;
@@ -23,7 +21,7 @@
             font-weight: 800;
             letter-spacing: 1.49px;
             color: #f58220;
-            line-height: 40px;
+            line-height: 20px;
         }
     	body {
 			margin-top: 50px;
@@ -38,7 +36,7 @@
             padding-left: 100px;
         }
 		.full {
-			background: url(./img/david-marcu-114194.png) no-repeat center center fixed; 
+			background: url(./img/daniel-hjalmarsson-269425.png) no-repeat center center fixed; 
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -67,8 +65,15 @@
         input {
             border-color: #ffffff;
             color: #ffffff;
-
-        }      
+        }
+        .mdl-textfield__input {
+            border-color: #ffffff;
+            color: #ffffff;
+            max-width: 250px;
+        }
+        .mdl-textfield__label {
+            color: #ffffff;
+        }        
         button {
             width: 200px;
             height: 60px;
@@ -126,6 +131,7 @@
             </footer>
         <!-- /.row -->
     </div>
+    <!-- /.container -->
     <script type="text/javascript">
             function postToGoogle() {
                 var field1 = $('#name').val();
@@ -134,7 +140,7 @@
  
                 $.ajax({
                     url: "https://script.google.com/macros/s/AKfycbxuCX3GoDq9ULAaLgIhlxkxWgrU2D6-GFb6ff6pWtWRJKegycY/exec",
-                    data: {"name": field1, "email": field2, "phone": field3, type: 'customer'},
+                    data: {"name": field1, "email": field2, "phone": field3, type: 'vendor'},
                     type: "POST",
                     dataType: "json",
                     statusCode: {
@@ -155,8 +161,8 @@
                 });
             });
         </script>
-    <!-- /.container -->
-      <!-- jQuery -->
-  
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </body>
 </html>
