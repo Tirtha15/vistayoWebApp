@@ -1,55 +1,68 @@
 <html class="full" lang="en">
 <head>
- 	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<title>Vistayo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">      
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-  <script src="http://code.jquery.com/jquery-3.2.1.min.js"
+    <title>Vistayo</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-  <style type="text/css">
+    <style type="text/css">
+/*        @import url('https://www.fontify.me/wf/1e6b054bebc65767084f30b7ae3c89e8');
+        @import url('https://www.fontify.me/wf/deec6e3ab9b23c9a131c79aea2bd490f');*/
         @font-face {
             font-family: Avenir;
-            src: "./fonts/AvenirLTStd-Medium.otf"X-UA-Compatible;
+            src: url('fonts/AvenirLTStd-Roman.otf');
+            font-size: 67px;
+            font-weight: 1000;
+            letter-spacing: 1.49px;
+        }
+        @font-face {
+            font-family: Helvetica;
+            src: url('fonts/HelveticaLTStd-Cond.otf');
+            font-style: normal;
+        }
+
+        .container {
+            max-width: 100%;
         }
         .main-header {
-            font: Avenir;
+            font-family: Avenir;
             font-size: 67px;
             font-weight: 800;
             letter-spacing: 1.49px;
             color: #f58220;
             line-height: 40px;
         }
-    	body {
-			margin-top: 50px;
-			margin-bottom: 50px;
-			background: none;
-            font-weight: 700;
+        body {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background: none;
             font-family: Helvetica;
             color: #ffffff;
-		}
+        }
         .below-text {
             font-size: 17px;
             padding-left: 100px;
         }
-		.full {
-			background: url(./img/david-marcu-114194.png) no-repeat center center fixed; 
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		}
+        .full {
+            background: url(./img/david-marcu-114194.png) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
         .white-header {
             font-size: 40px;
             letter-spacing: 0.13px;
             text-transform: uppercase;
             margin-top: 90px;
             line-height: 50px;
+            font-weight: 700;
         }
         .container {
             text-align: center;
@@ -58,8 +71,9 @@
             opacity: 0.83;
             font-size: 30px;
             letter-spacing: 0.1px;
-            line-height: 40px;
+            line-height: 30px;
             padding-top: 10px;
+            font-weight: 200;
         }
         .inputdiv { 
             background-color:rgba(0, 0, 0, 0.3);
@@ -67,8 +81,15 @@
         input {
             border-color: #ffffff;
             color: #ffffff;
-
-        }      
+        }
+        .mdl-textfield__input {
+            border-color: #ffffff;
+            color: #ffffff;
+            max-width: 250px;
+        }
+        .mdl-textfield__label {
+            color: #ffffff;
+        }        
         button {
             width: 200px;
             height: 60px;
@@ -88,11 +109,11 @@
     </style>
 </head>
 <body>
-	  <!-- Page Content -->
+      <!-- Page Content -->
     <div class="container">
-        <div class="row">
+        <div class="row s12 l12 m12 xl12">
                 <div ><font class="main-header">VISTAYO</font><br/><font class="below-text"><i>Make your every holiday, a great holiday!</i></font></div>
-                <div style="margin-top: 100px;margin-bottom: 100px;" class="col s10 offset-s1"><font class="white-header">Something Awesome is on it’s way.</font><br />
+                <div style="margin-top: 100px;margin-bottom: 100px;" class="col l10 xl10 s10 offset-s1 offset-l1 offset-xl1"><font class="white-header">Something Awesome is on it’s way.</font><br />
                 <font class="paragraph">Now, you can make your every holiday, a great holiday. <br />Excited? Stay tuned and be patient. Your patience will be rewarded. :)<br /><br /></font></div>
                 <div class="col offset-s1 s10 ">Vistayo is an invite-only platform that enables travellers make their every holiday, a great holiday.</div>                
                 <div class="col s10 offset-s1 inputdiv">
@@ -126,6 +147,7 @@
             </footer>
         <!-- /.row -->
     </div>
+    <!-- /.container -->
     <script type="text/javascript">
             function postToGoogle() {
                 var field1 = $('#name').val();
@@ -134,7 +156,7 @@
  
                 $.ajax({
                     url: "https://script.google.com/macros/s/AKfycbxuCX3GoDq9ULAaLgIhlxkxWgrU2D6-GFb6ff6pWtWRJKegycY/exec",
-                    data: {"name": field1, "email": field2, "phone": field3, type: 'customer'},
+                    data: {"name": field1, "email": field2, "phone": field3, type: 'vendor'},
                     type: "POST",
                     dataType: "json",
                     statusCode: {
@@ -155,8 +177,6 @@
                 });
             });
         </script>
-    <!-- /.container -->
-      <!-- jQuery -->
-  
+    <!-- jQuery -->
 </body>
 </html>
